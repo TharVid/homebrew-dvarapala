@@ -5,13 +5,13 @@
 class Dvarapala < Formula
   desc "MCP security gateway — drop-in protection for MCP servers"
   homepage "https://github.com/TharVid/dvarapala"
-  version "0.1.5"
+  version "0.1.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tharvid/dvarapala/releases/download/v0.1.5/dvarapala_0.1.5_macos_x86_64.tar.gz"
-      sha256 "02e26aaad92384fa1241c872a64550fb7710a69f2b17d93690c8b52f5fb5b1bf"
+      url "https://github.com/tharvid/dvarapala/releases/download/v0.1.6/dvarapala_0.1.6_macos_x86_64.tar.gz"
+      sha256 "570e713b9892753f69d145a0ee54feb9fe78953de29523aa146b6a6dde4fcbe0"
 
       define_method(:install) do
         bin.install "dvarapala"
@@ -19,8 +19,8 @@ class Dvarapala < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tharvid/dvarapala/releases/download/v0.1.5/dvarapala_0.1.5_macos_arm64.tar.gz"
-      sha256 "e87bd7e76aebb13278ac8735a69e9f68ef734f8a40d915dd0844aba1cff9b2b0"
+      url "https://github.com/tharvid/dvarapala/releases/download/v0.1.6/dvarapala_0.1.6_macos_arm64.tar.gz"
+      sha256 "4adb1775003930c579166ad97f13e6a3560c1a10fead77aca34bc10ddf831c4b"
 
       define_method(:install) do
         bin.install "dvarapala"
@@ -31,16 +31,16 @@ class Dvarapala < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tharvid/dvarapala/releases/download/v0.1.5/dvarapala_0.1.5_linux_x86_64.tar.gz"
-      sha256 "5e9da25b4fc2cae8ec811ec0de4939cedc5a3401236c0b5c61e96950010be9c8"
+      url "https://github.com/tharvid/dvarapala/releases/download/v0.1.6/dvarapala_0.1.6_linux_x86_64.tar.gz"
+      sha256 "8755f78d9412d512e855454ebef48a5ae7c490126bd190a4c405443b3856ad28"
       define_method(:install) do
         bin.install "dvarapala"
         pkgshare.install Dir["policies/*"] if Dir.exist?("policies")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tharvid/dvarapala/releases/download/v0.1.5/dvarapala_0.1.5_linux_arm64.tar.gz"
-      sha256 "df7468927b5892d9e1a5fd37b3070ad72fc3bea73991bf3604bf95763a1b6077"
+      url "https://github.com/tharvid/dvarapala/releases/download/v0.1.6/dvarapala_0.1.6_linux_arm64.tar.gz"
+      sha256 "af198dc2249b7b483bf1eb7b3086855d1702d5337e3acc95996411ce05a24ef6"
       define_method(:install) do
         bin.install "dvarapala"
         pkgshare.install Dir["policies/*"] if Dir.exist?("policies")
